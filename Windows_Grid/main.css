@@ -1,0 +1,814 @@
+
+    #window-container {
+        background-color: rgb(0,128,131);
+
+        position: fixed;
+
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+
+        display: grid;
+
+        grid-template-columns: repeat(3, 3.3fr);
+        grid-template-rows: repeat(3, 3.3fr);
+
+        grid-auto-flow: column;
+
+        grid-template-areas: 
+        
+        "tl tm tr"
+        "ml mm mr"
+        "bl bm br";
+
+    }
+
+        .center-image {
+            grid-area: mm;
+            justify-self: center;
+            align-self: center;
+
+            user-select: none;
+        }
+
+        .about {
+            grid-area: infoTL;
+            justify-self: center;
+            align-self: center;
+        }
+
+        #aboutWindow {
+            position: absolute;
+            top: 18%;
+            left: 32%;
+
+            display: grid;
+
+            grid-template-columns: 33.333% 66.666%;
+            grid-template-rows: 10% 80% 10%;
+
+            grid-template-areas: 
+            
+            "h h h"
+            "s m m"
+            "f f f";
+
+            width: 520px;
+            height: 600px;
+
+            background-color: rgb(192, 192, 192);
+
+            border-top: ridge 2px white;
+            border-right: ridge 2px black;
+            border-bottom: ridge 2px black;
+            border-left: ridge 2px white;
+
+            user-select: none;
+            overflow: visible;
+        }
+
+        #aboutWindow h2 {
+            grid-area: h;
+            text-align: start;
+            text-indent: 10%;
+
+            padding-top: 3%;
+
+            font-family: 'Julius Sans One';
+            text-shadow: 2px 2px 6px white;
+        }
+
+        #aboutWindow img {
+            grid-area: m;
+            padding-top: 5%;
+            padding-right: 11%;
+            align-self: start;
+            justify-self: end;
+
+            
+        }
+
+        #aboutWindow p {
+            grid-area: m;
+            text-align: right;
+            
+            align-self: end;
+            padding-bottom: 20%;
+            padding-right: 4%;
+
+            font-size: 15px;
+            font-family: 'Raleway';
+            font-weight: 400;
+
+            text-shadow: 2px 2px 6px white;
+        }
+
+        #aboutWindow h2::first-letter {
+            text-decoration: underline;
+        }
+
+        .contactForm {
+            grid-area: tl;
+            display: grid;
+
+            grid-template-columns: repeat(3, 3.3fr);
+            grid-template-rows: repeat(3, 3.3fr);
+
+            grid-template-areas: 
+
+            "infoTL infoTM infoTR"
+            "infoML infoMM infoMR"
+            "infoBL infoBM infoBR";
+
+            user-select: none;
+        }
+
+        .contactForm span {
+            grid-area: infoML;
+
+            justify-self: center;
+            align-self: center;
+
+            font-size: 12px;
+            color: white;
+            font-family: Arial;
+            text-align: center;
+        }
+
+        #contact {
+            width: 520px;
+            height: 360px;
+
+            display: block;
+
+            position: absolute;
+
+            top: 27%;
+            left: 32%;
+
+            background-color:rgb(192, 192, 192);
+
+            border-top: ridge 2px white;
+            border-right: ridge 2px black;
+            border-bottom: ridge 2px black;
+            border-left: ridge 2px white;
+
+            font-family: Arial;
+
+            overflow: visible;
+            user-select: none;
+
+        }
+
+        #contact p {
+            grid-area: Header;
+            text-align: center;
+            font-family: Arial;
+            font-size: 18px;
+            font-weight: lighter;
+        }
+        
+        #name {
+            position: absolute;
+            top: 20%;
+            left: 2%;
+        }
+        #nameBox {
+            position: absolute;
+            top: 20%;
+            left: 15%;
+        }
+
+        #email {
+            position: absolute;
+            top: 30%;
+            left: 2%;
+        }
+        #emailBox {
+            position: absolute;
+            top: 30%;
+            left: 15%;
+        }
+
+        #phone {
+            position: absolute;
+            top: 40%;
+            left: 2%;
+        }
+        #phoneBox {
+            position: absolute;
+            top: 40%;
+            left: 15%;
+        }
+
+        #message {
+            position: absolute;
+            left: 2%;
+            bottom: 30%
+        }
+        #messageBox {
+            position: absolute;
+            left: 20%;
+            bottom: 20%;
+        }
+
+        #submitForm {
+            position: absolute;
+            bottom: 8%;
+            left: 42.5%;
+
+            font-family: Arial;
+            background-color: rgba(192, 192, 192, 0.856);
+
+            border-top: ridge 2px white;
+            border-left: ridge 2px white;
+            border-bottom: ridge 2px black;
+            border-right: ridge 2px grey;
+        }
+        
+        input:focus {
+            box-shadow: 0px 0px 10px white;
+        }
+
+        .shutdownPrompt {
+
+            grid-area: bm;
+
+            background-color: rgb(192, 192, 192);
+            
+            justify-self: center;
+            align-self: start;
+
+            width: 240px;
+            height: 125px;
+
+            border-top: ridge 2px white;
+            border-right: ridge 2px black;
+            border-bottom: ridge 2px black;
+            border-left: ridge 2px white;
+
+            user-select: none;
+        }
+
+        .shutdownPrompt span {
+            font-size: 16px;
+            font-family: Arial;
+
+            position: absolute;
+            top: 30%;
+            left: 35%;          
+        }
+
+        .confirmShutdown {
+            font-size: 14px;
+            font-family: Arial;
+
+            position: absolute;
+            bottom: 27%;
+            left: 10%;
+
+            width: 40px;
+            height: 20px;
+            background-color: rgb(192, 192, 192);
+
+            border-top: ridge 2px white;
+            border-right: ridge 2px black;
+            border-bottom: ridge 2px black;
+            border-left: ridge 2px white;
+
+            text-align: center;
+        }
+
+        .declineShutdown {
+            font-size: 14px;
+            font-family: Arial;
+
+            position: absolute;
+            bottom: 27%;
+            left: 40%;
+
+            width: 40px;
+            height: 20px;
+            background-color: rgb(192, 192, 192);
+
+            border-top: ridge 2px white;
+            border-right: ridge 2px black;
+            border-bottom: ridge 2px black;
+            border-left: ridge 2px white;
+
+            text-align: center;
+        }
+
+        .cancelShutdownPrompt {
+            font-size: 14px;
+            font-family: Arial;
+
+            position: absolute;
+            bottom: 27%;
+            right: 10%;
+
+            width: 46px;
+            height: 20px;
+            background-color: rgb(192, 192, 192);
+
+            border-top: ridge 2px white;
+            border-right: ridge 2px black;
+            border-bottom: ridge 2px black;
+            border-left: ridge 2px white;
+
+            text-align: center;
+        }
+
+    #taskbar {
+        
+        position: fixed;
+        height: 26px;
+        min-width: 100%;
+        background-color: rgb(192, 192, 192);
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+
+        border-top: ridge 2px white;
+    }
+
+        #start {
+            
+            width: 52px;
+            height: 100%;
+        
+            text-align: right;
+            font-size: 16px;
+            font-family: 'Chewy';
+            font-weight: normal;
+            
+            display: inline-block;
+        
+            margin-left: 2px;
+            padding: 1px 2px;
+        
+            cursor: default;
+            user-select: none;
+        }
+
+        .borderRest {
+            border-top: ridge 2px white;
+            border-right: ridge 2px black;
+            border-bottom: ridge 2px black;
+            border-left: ridge 2px white;
+        }
+        
+        .borderClick {
+            line-height: 1.3em;
+            border-style: dashed inset dashed dashed;
+            border-top: black;
+            border-bottom: black;
+            border-left: black;
+            border-width: 1px;
+        }
+
+        .startMenu {
+            position: absolute;
+            display: flex;
+
+            flex-direction: row;
+
+            bottom: 24px;
+            left: 0px;
+
+            width: 194px;
+            height: 310px;
+
+            background-color: rgb(192, 192, 192);
+
+            border-top: ridge 3px white;
+            border-left: ridge 3px white;
+            border-bottom: ridge 2px black;
+            border-right: ridge 2px grey;
+
+            font-family: Arial;
+
+            cursor: default;
+        }
+
+            #startBanner {
+        
+                flex: 2;   
+                order: 1;
+            
+                background-color: rgb(128,128,128);
+                font-family: Arial;
+                font-weight:900;
+                text-transform: capitalize;
+
+            }
+            
+                #startBanner .b {
+
+                    color: rgb(192,192,192);
+                    font-size: 20px;
+                    transform: rotateZ(-90deg);
+                    white-space: nowrap;
+
+                    margin-top: 215px;
+                    margin-left: -55px;
+                    margin-right: -55px;
+                }
+            
+                #startBanner .num95 {
+
+                    font-weight: 100 !important;
+                    color: white;
+                }
+            
+            #sub-container {
+                flex: 8;
+                order: 2;
+    
+                display: flex;
+                flex-direction: column;
+
+                user-select: none;
+
+            }
+                .programs {
+                    flex: 1.42;
+                    order: 1;
+
+                }
+
+                .programs span {
+                    font-size: 14px;
+                    position: absolute;
+                    top: 4.5%;
+                    left: 47%;
+                }
+
+                .programs:hover {
+                    background-color:rgb(0,0,128);
+                    color:white;
+                }
+
+                .programs img {
+                    position: absolute;
+                    top: 2%;
+                    left: 22%;
+                }
+
+                .programs::after {
+                    content:'▶';
+                    font-size: 12px;
+                    position: absolute;
+                    top: 5.5%;
+                    right: 3%;
+                }
+                    .programsSubmenu {
+                        position: absolute;
+                        display: flex;
+
+                        flex-direction: column;
+
+                        bottom: 133px;
+                        left: 190px;
+
+                        width: 185px;
+                        height: 177px;
+
+                        background-color: rgb(192, 192, 192);
+
+                        border-top: ridge 2px white;
+                        border-left: ridge 2px white;
+                        border-bottom: ridge 2px black;
+                        border-right: ridge 2px grey;
+
+                        font-family: Arial;
+
+                        cursor: default;
+                    }
+
+                        .accessories {
+                            flex: 2.5;
+                            order: 1;
+                            text-align: left;
+                            font-size: 14px;
+                        }
+
+                        .accessories span {
+                            position: absolute;
+                            top: 8%;
+                            left: 30%;
+                        }
+                        .accessories:hover {
+                            background-color:rgb(0,0,128);
+                            color:white;
+                        }
+
+                        .accessories img {
+                            position: absolute;
+                            top: 2%;
+                            left: 3%;
+                        }
+
+                        .accessories::after {
+                            content:'▶';
+                            font-size: 12px;
+                            
+                            position: absolute;
+                            top: 9%;
+                            right: 3%;
+                        }
+
+                        .startUp {
+                            flex: 2.5;
+                            order: 2;
+                            text-align: left;
+                            font-size: 14px;
+                        }
+
+                        .startUp span {
+                            position: absolute;
+                            top: 33%;
+                            left: 30%;
+                        }
+
+                        .startUp:hover {
+                            background-color:rgb(0,0,128);
+                            color:white;
+                        }
+
+                        .startUp img {
+                            position: absolute;
+                            top: 27%;
+                            left: 3%;
+                        }
+
+                        .startUp::after {
+                            content:'▶';
+                            font-size: 12px;
+                            
+                            position: absolute;
+                            top: 34.5%;
+                            right: 3%;
+                        }
+
+                        .ms-dos-prompt {
+                            flex: 2.5;
+                            order: 3;
+                            text-align: left;
+                            font-size: 14px;
+                        }
+
+                        .ms-dos-prompt span {
+                            position: absolute;
+                            bottom: 33%;
+                            left: 30%;
+                        }
+
+                        .ms-dos-prompt:hover {
+                            background-color:rgb(0,0,128);
+                            color:white;
+                        }
+
+                        .ms-dos-prompt img {
+                            position: absolute;
+                            bottom: 27%;
+                            left: 3%;
+                        }
+
+                        .windowsExplorer {
+                            flex: 2.5;
+                            order: 4;
+                            text-align: left;
+                            font-size: 14px;
+                        }
+
+                        .windowsExplorer span {
+                            position: absolute;
+                            bottom: 8%;
+                            left: 30%;
+                        }
+
+                        .windowsExplorer:hover {
+                            background-color:rgb(0,0,128);
+                            color:white;
+                        }
+
+                        .windowsExplorer img {
+                            position: absolute;
+                            bottom: 2%;
+                            left: 3%;
+                        }
+
+                .documents {
+                    flex: 1.42;
+                    order: 2;
+                }
+
+                .documents span {
+                    font-size: 14px;
+                    position: absolute;
+                    top: 18.5%;
+                    left: 46.5%;
+                }
+
+                .documents:hover {
+                    background-color:rgb(0,0,128);
+                    color:white;
+                }
+
+                .documents img {
+                    position: absolute;
+                    top: 15.5%;
+                    left: 22%;
+                }
+
+                .documents::after {
+                    content:'▶';
+                    font-size: 12px;
+
+                    position: absolute;
+                    top: 19.12%;
+                    right: 3%;
+                }
+
+                .settings {
+                    flex: 1.42;
+                    order: 3;
+                }
+
+                .settings span {
+                    font-size: 14px;
+                    position: absolute;
+                    top: 32.5%;
+                    left: 46.5%;
+                }
+
+                .settings:hover {
+                    background-color:rgb(0,0,128);
+                    color:white;
+                }
+
+                .settings img {
+                    position: absolute;
+                    top: 30.5%;
+                    left: 22%;
+                }
+
+                .settings::after {
+                    content:'▶';
+                    font-size: 12px;
+                    position: absolute;
+                    top: 33.35%;
+                    right: 3%; 
+                }
+
+                .find {
+                    flex: 1.42;
+                    order: 4;
+                }
+
+                .find span {
+                    font-size: 14px;
+                    position: absolute;
+                    top: 47.5%;
+                    left: 46.5%;
+                }
+
+                .find:hover {
+                    background-color:rgb(0,0,128);
+                    color:white;
+                }
+
+                .find img {
+                    position: absolute;
+                    top: 44.75%;
+                    left: 22%;
+                }
+
+                .find::after {
+                    content:'▶';
+                    font-size: 12px;
+                    position: absolute;
+                    top: 47.75%;
+                    right: 3%; 
+                }
+
+                .help {
+                    flex: 1.42;
+                    order: 5;
+                }
+
+                .help span {
+                    font-size: 14px;
+                    position: absolute;
+                    bottom: 34%;
+                    left: 46.5%;
+                }
+
+                .help:hover {
+                    background-color:rgb(0,0,128);
+                    color:white;
+                }
+
+                .help img {
+                    position: absolute;
+                    bottom: 31%;
+                    left: 22%;
+                }
+
+                .run {                 
+                    flex: 1.42;
+                    order: 6;
+                    border-bottom: ridge 1px gray;
+                }
+
+                .run span {
+                    font-size: 14px;
+                    position: absolute;
+                    bottom: 19.5%;
+                    left: 46.5%;
+                }
+
+                .run:hover {
+                    background-color:rgb(0,0,128);
+                    color:white;
+                }
+
+                .run img {
+                    position: absolute;
+                    bottom: 16.5%;
+                    left: 22%;
+                }
+
+                .shutdown {       
+                    flex: 1.42;
+                    order: 7;
+
+                    border-top: ridge 1px white;
+                }
+
+                .shutdown span {
+                    font-size: 14px;
+                    position: absolute;
+                    bottom: 4.5%;
+                    left: 46.5%;
+                }
+
+                .shutdown:hover {
+                    background-color:rgb(0,0,128);
+                    color:white;
+                }
+
+                .shutdown img {
+                    position: absolute;
+                    bottom: 1.5%;
+                    left: 22%;
+                }
+
+    .aboutTaskbar {
+        width: 156px;
+        height: 100%;
+
+        position: absolute;
+        margin-left: 8px;
+
+        text-align: left;
+        
+        padding: 3px 15px;
+
+        font-size: 14px;
+        font-family: sans-serif;
+        font-weight: normal;
+            
+        display: inline-block;
+        
+        cursor: default;
+        user-select: none;
+    }
+    
+    #clock {
+        display: flex;
+
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        right: 0px;
+
+        height: 100%;
+        width: 75px;
+
+        border: inset 2px gray;
+
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 13.5px;
+    }
+
+        
+
+        
+
+    

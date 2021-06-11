@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyle 95</title>
+    <link rel="icon"
+      type="image/png"
+      href="images/favicon.png">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rock+Salt|Julius+Sans+One|Chewy|Raleway|Press+Start+2P">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <div id="window-container">
+        <div class="center-image" data-tilt>
+            <img src="images/centerImage.png">
+        </div>
+        <div class="shutdownPrompt">
+            <span>ShutDown?</span>
+            <div class="confirmShutdown" onclick="closeTab()">Yes</div>
+            <div class="declineShutdown">No</div>
+            <div class="cancelShutdownPrompt">Cancel</div>
+        </div>
+
+        <div id="aboutWindow">
+            <h2>About...</h2>
+            <img src="images/about_photo.jpg">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis quod molestias neque ratione! Alias, vero! Ex cumque nihil corporis illo, accusamus consequatur tenetur quis temporibus numquam, quasi, aspernatur reprehenderit omnis.</p>
+
+        </div>
+
+        <div class="contactForm">
+            <span><img src="images/info.ico" alt="contactForm"><br>contact</span>
+            <div class="about">
+                <span><img src="images/user.ico"><br>about</span>
+            </div>
+        </div>
+        <div id="contact">
+			<form action='contact.php' method="post">
+				<p>Contact me!</p>
+				<table>
+					<tr>
+						<td id="name">Name:</td>
+						<td><input maxlength="48" id="nameBox" name="name" required="" size="48" type="text" placeholder="Your Name..."></td>
+					</tr>
+					<tr>
+						<td id="email">Email:</td>
+						<td><input maxlength="48" id="emailBox" name="email" required="" size="48" type="email" placeholder="Your Email..."></td>
+					</tr>
+					<tr>
+						<td id="phone">Phone:</td>
+						<td><input maxlength="48" id="phoneBox" name="phone" size="48" type="text" placeholder="Your Phone..."></td>
+					</tr>
+					<tr>
+						<td id="message">Message:</td>
+						<td>
+						<textarea cols="42" id="messageBox" name="notes" required="" rows="6" placeholder="Your Message..."></textarea><br></td>
+					</tr>
+				</table>
+            
+				<p><input style="font-size:110%" id="submitForm" type="submit" value='Send'></p>
+            
+			</form>
+		</div>
+    </div>
+
+    <div id="taskbar">
+        <div id="start">
+            Start
+        </div>
+
+        <div class="aboutTaskbar">
+            <span>About</span>
+        </div>
+
+        <div id="clock"></div>
+    </div>
+
+    <div class="startMenu">
+        <div id="startBanner"> 
+        
+            <div class="b">
+                Windows
+                <span class="num95">95</span>    
+            </div>
+    
+        </div>
+
+        <div id="sub-container">
+        
+            <div class="programs">
+                <img src="images/programs.ico" alt="programs">
+                <span><u>P</u>rograms</span>
+            </div>
+
+            <div class="programsSubmenu">
+                <div class="accessories">
+                    <img src="images/programsfolder.ico">
+                    <span>Accessories</span>
+                </div>
+                <div class="startUp">
+                    <img src="images/programsfolder.ico">
+                    <span>StartUp</span>
+                </div>
+                <div class="ms-dos-prompt">
+                    <img src="images/ms-dos.ico">
+                    <span>MS-DOS Prompt</span>
+                </div>
+                <div class="windowsExplorer">
+                    <img src="images/windows-explorer.ico">
+                    <span>Windows Explorer</span>
+                </div>
+            </div>
+
+            <div class="documents">
+                <img src="images/documents.ico" alt="documents">
+                <span><u>D</u>ocuments</span>
+            </div>
+            <div class="settings">
+                <img src="images/settings.ico" alt="settings">
+                <span><u>S</u>ettings</span>
+            </div>
+            <div class="find">
+                <img src="images/find.ico" alt="find">
+                <span>Find</span>
+            </div>
+            <div class="help">
+                <img src="images/help.ico" alt="help">
+                <span>Help</span>
+            </div>
+            <div class="run">
+                <img src="images/run.ico" alt="run">
+                <span>Run</span>
+            </div>
+            <div class="shutdown">
+                <img src="images/shutdown.ico" alt="shutdown">
+                <span>Sh<u>u</u>t Down</span>
+            </div>
+            
+        </div>
+
+    </div>
+    
+    <script type="text/javascript" src="tilt.js"></script>
+    <script type="text/javascript" src="main-script.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</body>
+</html>
